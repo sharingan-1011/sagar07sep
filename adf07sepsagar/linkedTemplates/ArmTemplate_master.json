@@ -11,21 +11,29 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
 		"AzureDataLakeStorage1_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
 		},
-		"ls07sepsagar_accountKey": {
+		"HttpServer1_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls07sepsagar'"
+			"metadata": "Secure string for 'password' of 'HttpServer1'"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://sa07sepsagar.dfs.core.windows.net/"
 		},
-		"ls07sepsagar_properties_typeProperties_url": {
+		"HttpServer1_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://sa07sepsagar.dfs.core.windows.net/"
+			"defaultValue": "https://atlas.microsoft.com/weather/currentConditions/json?api-version=1.0&query=47.60357,-122.32945&subscription-key=RC9l6uyUWjmZAQWlQFZEgWV4F2oBZzg1HmC7lhNPyGw"
+		},
+		"HttpServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sagar4044"
 		},
 		"containerUri": {
 			"type": "string",
@@ -57,17 +65,23 @@
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
 					"AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					},
-					"ls07sepsagar_accountKey": {
-						"value": "[parameters('ls07sepsagar_accountKey')]"
+					"HttpServer1_password": {
+						"value": "[parameters('HttpServer1_password')]"
 					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
 					},
-					"ls07sepsagar_properties_typeProperties_url": {
-						"value": "[parameters('ls07sepsagar_properties_typeProperties_url')]"
+					"HttpServer1_properties_typeProperties_url": {
+						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
+					},
+					"HttpServer1_properties_typeProperties_userName": {
+						"value": "[parameters('HttpServer1_properties_typeProperties_userName')]"
 					}
 				}
 			},

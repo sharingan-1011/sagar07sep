@@ -8,17 +8,23 @@
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
-		"ls07sepsagar_accountKey": {
+		"HttpServer1_password": {
 			"value": ""
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://sa07sepsagar.dfs.core.windows.net/"
 		},
-		"ls07sepsagar_properties_typeProperties_url": {
-			"value": "https://sa07sepsagar.dfs.core.windows.net/"
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://atlas.microsoft.com/weather/currentConditions/json?api-version=1.0&query=47.60357,-122.32945&subscription-key=RC9l6uyUWjmZAQWlQFZEgWV4F2oBZzg1HmC7lhNPyGw"
+		},
+		"HttpServer1_properties_typeProperties_userName": {
+			"value": "sagar4044"
 		}
 	}
 }
