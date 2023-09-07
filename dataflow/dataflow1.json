@@ -9,7 +9,7 @@
 						"referenceName": "input",
 						"type": "DatasetReference"
 					},
-					"name": "moivedatasource"
+					"name": "moviedatasource"
 				}
 			],
 			"sinks": [
@@ -39,8 +39,8 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> moivedatasource",
-				"moivedatasource filter(toInteger(Year) >= 2007 && toInteger(Year) <= 2009) ~> filter1",
+				"     ignoreNoFilesFound: false) ~> moviedatasource",
+				"moviedatasource filter(toInteger(Year) >= 2007 && toInteger(Year) <= 2009) ~> filter1",
 				"filter1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
