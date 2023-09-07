@@ -194,10 +194,13 @@
 					],
 					"transformations": [
 						{
-							"name": "filter1"
+							"name": "Year20072009"
 						},
 						{
-							"name": "filter2"
+							"name": "ComedyGenreOnly"
+						},
+						{
+							"name": "select1"
 						}
 					],
 					"scriptLines": [
@@ -214,9 +217,19 @@
 						"     allowSchemaDrift: true,",
 						"     validateSchema: false,",
 						"     ignoreNoFilesFound: false) ~> moviedatasource",
-						"moviedatasource filter(toInteger(Year) >= 2007 && toInteger(Year) <= 2009) ~> filter1",
-						"filter1 filter(toString(Genre) == \"Comedy\") ~> filter2",
-						"filter2 sink(allowSchemaDrift: true,",
+						"moviedatasource filter(toInteger(Year) >= 2007 && toInteger(Year) <= 2009) ~> Year20072009",
+						"Year20072009 filter(toString(Genre) == \"Comedy\") ~> ComedyGenreOnly",
+						"ComedyGenreOnly select(mapColumn(",
+						"          Film,",
+						"          Genre,",
+						"          {Lead Studio},",
+						"          {Rotten Tomatoes %},",
+						"          {Worldwide Gross},",
+						"          Year",
+						"     ),",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true) ~> select1",
+						"select1 sink(allowSchemaDrift: true,",
 						"     validateSchema: false,",
 						"     skipDuplicateMapInputs: true,",
 						"     skipDuplicateMapOutputs: true) ~> sink1"
